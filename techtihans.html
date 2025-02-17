@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Lost in Space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d); /* Gradient background */
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            max-width: 600px;
+            z-index: 10;
+            text-align: center; /* Center text within container */
+        }
+
+        h1 {
+            font-size: 8rem; /* Use rem for scalable font size */
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Improved text shadow */
+        }
+
+        p {
+            font-size: 1.2rem; /* Use rem for scalable font size */
+            margin-bottom: 2rem;
+            line-height: 1.6; /* Improve readability */
+        }
+
+        .astronaut {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%); /* Center the astronaut */
+            width: 150px;
+            animation: float 6s infinite linear; /* Smoother floating animation */
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cdefs%3E%3Cpattern id='starfield' x='0' y='0' width='50' height='50' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='25' cy='25' r='1' fill='white'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23starfield)'/%3E%3C/svg%3E");
+            animation: twinkle 10s infinite linear;
+            opacity: 0.8; /* Slightly more visible stars */
+        }
+
+
+        @keyframes float {
+            0% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-20px); }
+            100% { transform: translateX(-50%) translateY(0); }
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.6; }
+            50% { opacity: 0.8;}
+            100% { opacity: 0.6; }
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #ffcc00;
+            color: #2a5298;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 0.5rem;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 0.5rem 1rem rgba(255, 204, 0, 0.4);
+        }
+
+        .button:hover {
+            background: #ff9900;
+            color: white;
+            transform: scale(1.05); /* Subtle scale on hover */
+            box-shadow: 0 0.8rem 1.2rem rgba(255, 153, 0, 0.5); /* Increased shadow on hover */
+        }
+
+        .planet {
+            position: absolute;
+            width: 200px; /* Adjust size as needed */
+            height: 200px; /* Adjust size as needed */
+            background-image: url('planet_image.png'); /* Replace with your planet image */
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%; /* Make it round */
+            animation: rotate 20s linear infinite; /* Rotate the planet */
+            bottom: 20px; /* Position from bottom */
+            left: 20px; /* Position from left */
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <h1>404</h1>
+        <p>Looks like you're lost in space!</p>
+        <!-- <img src="astronut.png" alt="astronaut" class="astronaut">  --> 
+        <p>Don't worry, we'll guide you back.</p>
+        <a href="/" class="button">Go Home</a>
+    </div>
+    <div class="planet"></div>  </body>
+</html>

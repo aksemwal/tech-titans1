@@ -1,0 +1,127 @@
+body {
+    background-image: url("train.jpg");
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    padding: 50px;
+}
+.heading{
+    padding: 100px;
+    color: black;
+    text-align: center;
+    font-size: 80px;
+    font-family: Sigmar;
+    text-shadow: -5px -5px 2px white;
+}
+/* .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('your-image.jpg') no-repeat center center/cover;
+    z-index: -1; /* Puts it behind the content */
+} */
+/* .content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: white;
+}
+.image1,.image3{
+    margin: 5pc 5pc;
+    display: flex-start;
+    align-items: left;
+    flex-direction: left;
+    justify-content: flex-start;
+
+}
+.image2{
+    margin: 5pc 5pc;
+    display: flex;
+    align-items:flex-end;
+    flex-direction: right;
+    /* justify-content: flex-start; */
+
+} */
+.p1{
+
+}
+.content {
+    font-size: 30px;
+    color: white;
+    text-shadow: -3px -3px 2px black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between elements */
+    /* margin: 50px; */
+    align-items: center; /* Centers content */
+    /* font-size: 3rem; */
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px red, -2px -2px blue;
+    animation: glitch 0.2s infinite;
+}
+@keyframes glitch {
+    0% { text-shadow: 2px 2px red, -2px -2px blue; }
+    25% { text-shadow: -2px -2px red, 2px 2px blue; }
+    50% { text-shadow: 4px 4px red, -4px -4px blue; }
+    75% { text-shadow: -4px -4px red, 4px 4px blue; }
+    100% { text-shadow: 2px 2px red, -2px -2px blue; }
+  }
+  @keyframes shake {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-5px, 5px) rotate(-2deg); }
+    50% { transform: translate(5px, -5px) rotate(2deg); }
+    75% { transform: translate(-5px, -5px) rotate(-3deg); }
+  }
+  
+ 
+  
+.cont{
+    align-items: center;
+    text-align: center;
+    border: 5px solid white;
+    margin: 20px;
+    padding: 50px;
+}
+.p2{
+    font-size: 30px;
+    color: white;
+    text-shadow: -3px -3px 2px black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between elements */
+    /* margin: 50px; */
+    align-items: center;
+    padding: 50px;
+}
+  .p3{
+    font-size: 30px;
+    color: white;
+    text-shadow: -3px -3px 2px black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between elements */
+    /* margin: 50px; */
+    align-items:flex-end; /* Centers content */
+    /* font-size: 3rem; */
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px red, -2px -2px blue;
+    animation: glitch 0.2s infinite;
+  }
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.image1,.image2,.image3{
+    border: 10px solid white;
+    margin: 20px;
+    animation: shake 0.5s infinite;
+}

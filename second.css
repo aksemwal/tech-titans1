@@ -1,0 +1,83 @@
+body {
+    background-image: url("train1\ \(1\).jpg");
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+}
+.heading{
+    padding: 80px;
+    color: black;
+    text-align: center;
+    font-size: 80px;
+    font-family: Sigmar;
+    text-shadow: -5px -5px 2px white;
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('train.jpg') no-repeat center center/cover;
+    z-index: -1; /* Puts it behind the content */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: white;
+    
+}
+
+
+.typing-text {
+  font-size: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  width: 0;
+  animation: typing 4s steps(20, end) forwards;
+}
+
+.btn {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.p2{
+    font-size: 30px;
+    color: white;
+    text-shadow: -3px -3px 2px black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between elements */
+    /* margin: 50px; */
+    align-items: center;
+    padding: 50px;
+}
+
+.p1{
+    font-size: 30px;
+    color: white;
+    text-shadow: -3px -3px 2px black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between elements */
+    /* margin: 50px; */
+    align-items: center;
+    text-align: center;
+    border: 5px solid white;
+    margin: 20px;
+    padding: 50px;
+    border-radius: 200px;
+}
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
